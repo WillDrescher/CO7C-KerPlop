@@ -13,7 +13,29 @@ public class LevelSetup {
     private ArrayList<GamePiece> interactingPieces;
     private int playerStartLoc;
     
-    private GamePiece Treasure = new Treasure('x',"X marks the spot", 5);
+    
+    //*********Stage 1 units**************
+    //stage 1 treasures
+    private Treasure treasure1 = new Treasure('x',"X marks the spot", 3);
+    private Treasure treasure2 = new Treasure('x',"X marks the spot", 17);
+    
+    //Wobbles only appear on stage 1
+    private Wobble wobble1 = new Wobble('W',"Not very stable", 5);
+    private Wobble wobble2 = new Wobble('W',"Not very stable", 5);
+    
+    //Stage 1 Ciphers
+    private Cipher cipher1 = new Cipher('C',"Highly accurate sniper", 5);
+    
+    //stage 2 treasures
+    private Treasure treasure3 = new Treasure('x',"X marks the spot", 5);
+    private Treasure treasure4 = new Treasure('x',"X marks the spot", 1);
+   
+    //Stage 2 Ciphers
+    private Cipher cipher2 = new Cipher('C',"Highly accurate sniper", 5);
+    private Cipher cipher3 = new Cipher('C',"Highly accurate sniper", 5);
+
+
+
 
     public LevelSetup() {
         board = new Drawable[GameEngine.BOARD_SIZE];
@@ -23,7 +45,7 @@ public class LevelSetup {
 
     public void createLevel(int levelNum) {
 
-        // reset everything each time a level loads
+        // reset all for every new level
         board = new Drawable[GameEngine.BOARD_SIZE];
         movingPieces = new ArrayList<>();
         interactingPieces = new ArrayList<>();
@@ -39,34 +61,46 @@ public class LevelSetup {
     private void setupLevelOne() {
 
         playerStartLoc = GameEngine.BOARD_SIZE / 2;
-
-        // example pieces — replace with your actual classes
-        Treasure prize = new Drawable(5);
-        board[5] = prize;
-        interactingPieces.add(prize);
-
-        Enemy enemy = new Enemy(15);
-        board[15] = enemy;
-        interactingPieces.add(enemy);
-        movingPieces.add(enemy);
+        
+        board[treasure1.getLocation()] = treasure1;
+        interactingPieces.add(treasure1);
+        
+        board[treasure1.getLocation()] = treasure2;
+        interactingPieces.add(treasure2);
+        
+        board[wobble1.getLocation()] = wobble1;
+        interactingPieces.add(wobble1);
+        movingPieces.add(wobble1);
+        
+        board[wobble2.getLocation()] = wobble2;
+        interactingPieces.add(wobble2);
+        movingPieces.add(wobble2);
+        
+        board[cipher1.getLocation()] = cipher1;
+        interactingPieces.add(cipher1);
+        movingPieces.add(cipher1);
+        
+        
+        
+       
     }
 
     private void setupLevelTwo() {
 
-        playerStartLoc = 0;
+        playerStartLoc = GameEngine.BOARD_SIZE / 2;
 
-        Treasure prize1 = new Treasure(Treasure.getSymbol(), String label, int location);
-        board[3] = prize1;
+        Treasure prize1 = new Treasure('x',"X marks the spot", 3);
+        board[prize1.getLocation()] = prize1;
         interactingPieces.add(prize1);
 
-        Treasure prize2 = new Prize(18);
-        board[18] = prize2;
+        Treasure prize2 = new Treasure('x',"X marks the spot", 18);
+        board[prize1.getLocation()] = prize2;
         interactingPieces.add(prize2);
 
-        Enemy enemy1 = new Enemy(10);
-        board[10] = enemy1;
-        interactingPieces.add(enemy1);
-        movingPieces.add(enemy1);
+        Cipher cipher1 = new Cipher('C',"Highly accurate sniper", 7);
+        board[10] = cipher1;
+        interactingPieces.add(cipher1);
+        movingPieces.add(cipher1);
     }
 
     public Drawable[] getBoard() {
