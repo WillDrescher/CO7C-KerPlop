@@ -17,14 +17,18 @@ public class LevelSetup {
     //*********Stage 1 units**************
     //stage 1 treasures
     private Treasure treasure1 = new Treasure('x',"X marks the spot", 3);
-    private Treasure treasure2 = new Treasure('x',"X marks the spot", 17);
+    private Treasure treasure2 = new Treasure('x',"X marks the spot", 18);
     
-    //Wobbles only appear on stage 1
+    //Wobble only appear on stage 1
     private Wobble wobble1 = new Wobble('W',"Will chase you but cant get around obstacles", 8);
-    private Wobble wobble2 = new Wobble('W',"Will chase you but cant get around obstacles", 4);
     
     //Stage 1 Ciphers
     private Cipher cipher1 = new Cipher('C',"Highly accurate sniper, had too much coffee this morning", 5);
+    
+    //Stage 1 Nibbler
+   // private Nibbler nibbler1 = new nibbler('N',"Unable to move, but definitely able to bite", 16);
+
+    
     
     //Stage 2 peoples
     

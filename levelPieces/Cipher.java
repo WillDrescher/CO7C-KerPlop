@@ -27,18 +27,23 @@ public class Cipher extends GamePiece implements Moveable {
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		// TODO Auto-generated method stub
-	    gameBoard[getLocation()] = null;
+	    int oldLoc = getLocation();
+	    int newLoc = oldLoc;
 	    
-        int newLoc = rand.nextInt((20 - 0) + 1) + 0;
-		
-		if (gameBoard[newLoc] != null) {
-	        return;
+	    while (true) {
+	        int spot = rand.nextInt(gameBoard.length);
+	        if (gameBoard[spot] == null && spot != playerLocation) {
+	            newLoc = spot;
+	            break;
+	        } else if (newLoc == oldLoc) {
+	        	return;
+	        }
+
 	    }
-		
-		setLocation(newLoc);
-		gameBoard[newLoc] = this;
-		
-		
+	    
+	    gameBoard[oldLoc] = null;
+	    setLocation(newLoc);
+	    gameBoard[newLoc] = this;
 		
 	}
 }
