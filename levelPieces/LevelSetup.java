@@ -26,6 +26,8 @@ public class LevelSetup {
     //Stage 1 Ciphers
     private Cipher cipher1 = new Cipher('C',"Highly accurate sniper", 5);
     
+    //Stage 2 peoples
+    
     //stage 2 treasures
     private Treasure treasure3 = new Treasure('x',"X marks the spot", 5);
     private Treasure treasure4 = new Treasure('x',"X marks the spot", 1);
