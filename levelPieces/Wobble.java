@@ -16,14 +16,19 @@ public class Wobble extends GamePiece implements Moveable {
 		// TODO Auto-generated method stub
 		gameBoard[getLocation()] = null;
 		int newLoc = 0;
-
 		
-        if(getLocation() > playerLocation) {
-        	newLoc = getLocation() - 1;
-        } else {
-        	newLoc = getLocation() + 1;
-        }
+
+		if((Math.abs(getLocation() - playerLocation) <= 2) || (gameBoard[getLocation() + 1] != null) || (gameBoard[getLocation() - 1] != null)) {
+			newLoc = getLocation();
+		} else {
+	        if(getLocation() > playerLocation) {
+	        	newLoc = getLocation() - 1;
+	        } else {
+	        	newLoc = getLocation() + 1;
+	        }
+		}
         
+        setLocation(newLoc);
         gameBoard[newLoc] = this;
 
 
@@ -32,6 +37,10 @@ public class Wobble extends GamePiece implements Moveable {
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		// TODO Auto-generated method stub
-		return null;
+		if(getLocation() == playerLocation) {
+			return InteractionResult.HIT;
+		} else {
+			return null;
+		}
 	}
 }

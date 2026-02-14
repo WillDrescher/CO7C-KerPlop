@@ -20,11 +20,11 @@ public class LevelSetup {
     private Treasure treasure2 = new Treasure('x',"X marks the spot", 17);
     
     //Wobbles only appear on stage 1
-    private Wobble wobble1 = new Wobble('W',"Not very stable", 5);
-    private Wobble wobble2 = new Wobble('W',"Not very stable", 5);
+    private Wobble wobble1 = new Wobble('W',"Will chase you but cant get around obstacles", 8);
+    private Wobble wobble2 = new Wobble('W',"Will chase you but cant get around obstacles", 4);
     
     //Stage 1 Ciphers
-    private Cipher cipher1 = new Cipher('C',"Highly accurate sniper", 5);
+    private Cipher cipher1 = new Cipher('C',"Highly accurate sniper, had too much coffee this morning", 5);
     
     //Stage 2 peoples
     
@@ -67,16 +67,12 @@ public class LevelSetup {
         board[treasure1.getLocation()] = treasure1;
         interactingPieces.add(treasure1);
         
-        board[treasure1.getLocation()] = treasure2;
+        board[treasure2.getLocation()] = treasure2;
         interactingPieces.add(treasure2);
         
         board[wobble1.getLocation()] = wobble1;
         interactingPieces.add(wobble1);
         movingPieces.add(wobble1);
-        
-        board[wobble2.getLocation()] = wobble2;
-        interactingPieces.add(wobble2);
-        movingPieces.add(wobble2);
         
         board[cipher1.getLocation()] = cipher1;
         interactingPieces.add(cipher1);
