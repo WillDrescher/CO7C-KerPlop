@@ -151,7 +151,6 @@ public class LevelSetup {
 		
 		board[gromp1.getLocation()] = gromp1;
         interactingPieces.add(gromp1);
-        movingPieces.add(gromp1);
 		System.out.println(gromp1.symbol + ": " + gromp1.getLabel());
 		
 		board[13] = disco;
