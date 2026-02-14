@@ -8,7 +8,7 @@ import gameEngine.InteractionResult;
  */
 public class Fairy extends GamePiece {
 
-    public Fairy(int location) {
+    public Fairy(char symbol, String label, int location) {
         super('F', "Fairy", location);
     }
 

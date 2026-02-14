@@ -26,7 +26,7 @@ public class LevelSetup {
     private Cipher cipher1 = new Cipher('C',"Highly accurate sniper, had too much coffee this morning", 5);
     
     //Stage 1 Nibbler
-   // private Nibbler nibbler1 = new nibbler('N',"Unable to move, but definitely able to bite", 16);
+    private Nibbler nibbler1 = new Nibbler('N',"Unable to move, but definitely able to bite", 16);
 
     
     

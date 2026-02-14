@@ -8,7 +8,7 @@ import gameEngine.InteractionResult;
  */
 public class Nibbler extends GamePiece {
 
-    public Nibbler(int location) {
+    public Nibbler(char symbol, String label, int location) {
         super('N', "Nibbler", location);
     }
 

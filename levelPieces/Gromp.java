@@ -10,7 +10,7 @@ import gameEngine.Moveable;
  */
 public class Gromp extends GamePiece implements Moveable {
 
-    public Gromp(int location) {
+    public Gromp(char symbol, String label, int location) {
         super('G', "Gromp", location);
     }
 
