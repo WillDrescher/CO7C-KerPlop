@@ -8,6 +8,7 @@ public class Wobble extends GamePiece implements Moveable {
 
 	public Wobble(char symbol, String label, int location) {
 		super(symbol, label, location);
+
 		// TODO Auto-generated constructor stub
 	}
 

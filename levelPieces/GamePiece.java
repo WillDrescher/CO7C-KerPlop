@@ -30,7 +30,7 @@ public abstract class GamePiece implements Drawable {
 	public GamePiece(char symbol, String label, int location) {
 		super();
 		this.symbol = symbol;
-		this.label = label ;
+		this.setLabel(label) ;
 		this.location = location;
 	}
 
@@ -73,7 +73,15 @@ public abstract class GamePiece implements Drawable {
 	
 	@Override
 	public String toString() {
-		return symbol + " - " + label ; 
+		return symbol + " - " + getLabel() ; 
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
 	}
 	
 
