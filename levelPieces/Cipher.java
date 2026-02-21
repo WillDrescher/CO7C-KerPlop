@@ -20,7 +20,7 @@ public class Cipher extends GamePiece implements Moveable {
 		if(Math.abs(getLocation() - playerLocation) <= 1) {
 			return InteractionResult.KILL;
 		} else {
-			return null;
+			return InteractionResult.NONE;
 		}
 	}
 
