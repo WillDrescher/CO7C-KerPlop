@@ -41,7 +41,7 @@ public class Wobble extends GamePiece implements Moveable {
 		if(getLocation() == playerLocation) {
 			return InteractionResult.HIT;
 		} else {
-			return null;
+			return InteractionResult.NONE;
 		}
 	}
 }

@@ -15,7 +15,7 @@ public class Treasure extends GamePiece {
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 	    if (collected) {
-	    	return null;
+	    	return InteractionResult.NONE;
 	    }
 
 		// TODO Auto-generated method stub
@@ -24,7 +24,7 @@ public class Treasure extends GamePiece {
 			collected = true;
 			return InteractionResult.GET_POINT;
 		} else {
-			return null;
+			return InteractionResult.NONE;
 		}
 	}
 

@@ -8,10 +8,10 @@ import gameEngine.InteractionResult;
 
 import org.junit.jupiter.api.Test;
 
-class CipherTest {
+class CipherKillTest {
 
 	@Test
-	public void testCipher() {
+	public void testCipherKill() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Cipher Cipher = new Cipher('0', null, 10);
 		gameBoard[10] = Cipher;
